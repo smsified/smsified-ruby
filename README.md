@@ -31,7 +31,7 @@ Find a subscription:
 Documentation
 -------------
 
-May be found at http://tropo.github.com/smsified & http://smsified.com.
+May be found at http://smsified.github.com/smsified-ruby & http://smsified.com.
 
 License
 -------
