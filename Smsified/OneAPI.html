@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Smsified::OneAPI</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (O)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Smsified.html" title="Smsified (module)">Smsified</a></span></span>
+     &raquo; 
+    <span class="title">OneAPI</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Smsified::OneAPI
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Smsified::OneAPI</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">HTTParty, <span class='object_link'><a href="Helpers.html" title="Smsified::Helpers (module)">Helpers</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/smsified/oneapi.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (OneAPI) <strong>initialize</strong>(options) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Intantiate a new class to work with OneAPI.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">- (Object) <strong>method_missing</strong>(method, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Dispatches method calls to other objects for subscriptions and reporting.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_sms-instance_method" title="#send_sms (instance method)">- (Object) <strong>send_sms</strong>(options) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Send an SMS to one or more addresses.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Smsified::OneAPI (class)">OneAPI</a></span></tt>) <strong>initialize</strong>(options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Intantiate a new class to work with OneAPI
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='one_api identifier id'>one_api</span> <span class='assign token'>=</span> <span class='OneAPI constant id'>OneAPI</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'user'</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'123'</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to create the user
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+if :username is not passed as an option
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+if :password is not passed as an option
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/oneapi.rb', line 25</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':username required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:username</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':password required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:password</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='debug_output identifier id'>debug_output</span> <span class='$stdout gvar id'>$stdout</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:debug</span><span class='rbrack token'>]</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='base_uri identifier id'>base_uri</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:base_uri</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='SMSIFIED_ONEAPI_PUBLIC_URI constant id'>SMSIFIED_ONEAPI_PUBLIC_URI</span>
+  <span class='@auth ivar id'>@auth</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:username</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:password</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  
+  <span class='@destination_address ivar id'>@destination_address</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:destination_address</span><span class='rbrack token'>]</span>
+  <span class='@sender_address ivar id'>@sender_address</span>      <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:sender_address</span><span class='rbrack token'>]</span>
+  
+  <span class='@subscriptions ivar id'>@subscriptions</span> <span class='assign token'>=</span> <span class='Subscriptions constant id'>Subscriptions</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='@reporting ivar id'>@reporting</span>     <span class='assign token'>=</span> <span class='Reporting constant id'>Reporting</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <p class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>method_missing</strong>(method, *args) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Dispatches method calls to other objects for subscriptions and reporting
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/oneapi.rb', line 73</span>
+
+<span class='def def kw'>def</span> <span class='method_missing identifier id'>method_missing</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='rparen token'>)</span>
+  <span class='if if kw'>if</span> <span class='method identifier id'>method</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='match identifier id'>match</span> <span class='regexp val'>/subscription/</span>
+    <span class='if if kw'>if</span> <span class='args identifier id'>args</span><span class='dot token'>.</span><span class='size identifier id'>size</span> <span class='eq op'>==</span> <span class='integer val'>2</span>
+      <span class='@subscriptions ivar id'>@subscriptions</span><span class='dot token'>.</span><span class='send identifier id'>send</span> <span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='args identifier id'>args</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='args identifier id'>args</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+    <span class='else else kw'>else</span>
+      <span class='@subscriptions ivar id'>@subscriptions</span><span class='dot token'>.</span><span class='send identifier id'>send</span> <span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='args identifier id'>args</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+    <span class='end end kw'>end</span>
+  <span class='else else kw'>else</span>
+    <span class='if if kw'>if</span> <span class='method identifier id'>method</span> <span class='eq op'>==</span> <span class='symbol val'>:delivery_status</span> <span class='orop op'>||</span> <span class='method identifier id'>method</span> <span class='eq op'>==</span> <span class='symbol val'>:retrieve_sms</span> <span class='orop op'>||</span> <span class='method identifier id'>method</span> <span class='eq op'>==</span> <span class='symbol val'>:search_sms</span>
+      <span class='@reporting ivar id'>@reporting</span><span class='dot token'>.</span><span class='send identifier id'>send</span> <span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='args identifier id'>args</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+    <span class='else else kw'>else</span>
+      <span class='raise identifier id'>raise</span> <span class='RuntimeError constant id'>RuntimeError</span><span class='comma token'>,</span> <span class='string val'>'Unknown method'</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="send_sms-instance_method">
+  
+    - (<tt>Object</tt>) <strong>send_sms</strong>(options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Send an SMS to one or more addresses
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='one_api identifier id'>one_api</span><span class='dot token'>.</span><span class='send_sms identifier id'>send_sms</span> <span class='symbol val'>:address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'14155551212'</span><span class='comma token'>,</span> <span class='symbol val'>:message</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'Hi there!'</span><span class='comma token'>,</span> <span class='symbol val'>:sender_address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'13035551212'</span>
+<span class='one_api identifier id'>one_api</span><span class='dot token'>.</span><span class='send_sms identifier id'>send_sms</span> <span class='symbol val'>:address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'14155551212'</span><span class='comma token'>,</span> <span class='string val'>'13035551212'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:message</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'Hi there!'</span><span class='comma token'>,</span> <span class='symbol val'>:sender_address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'13035551212'</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to send an sms
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+if :sender_address is not passed as an option when not passed on object
+creation
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+if :address is not provided as an option
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+if :message is not provided as an option
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/oneapi.rb', line 55</span>
+
+<span class='def def kw'>def</span> <span class='send_sms identifier id'>send_sms</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':sender_address is required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:sender_address</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span> <span class='andop op'>&amp;&amp;</span> <span class='@sender_address ivar id'>@sender_address</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':address is required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:address</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':message is required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:message</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  
+  <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:sender_address</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:sender_address</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='@sender_address ivar id'>@sender_address</span>
+  <span class='query_options identifier id'>query_options</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='dot token'>.</span><span class='clone identifier id'>clone</span>
+  <span class='query_options identifier id'>query_options</span><span class='dot token'>.</span><span class='delete identifier id'>delete</span><span class='lparen token'>(</span><span class='symbol val'>:sender_address</span><span class='rparen token'>)</span>
+  <span class='query_options identifier id'>query_options</span> <span class='assign token'>=</span> <span class='camelcase_keys identifier id'>camelcase_keys</span><span class='lparen token'>(</span><span class='query_options identifier id'>query_options</span><span class='rparen token'>)</span>
+
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='post identifier id'>post</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/outbound/#{options[:sender_address]}/requests&quot;</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:body</span>       <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='build_query_string identifier id'>build_query_string</span><span class='lparen token'>(</span><span class='query_options identifier id'>query_options</span><span class='rparen token'>)</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:headers</span>    <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='SMSIFIED_HTTP_HEADERS constant id'>SMSIFIED_HTTP_HEADERS</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri May 20 09:38:07 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.8 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Smsified::Subscriptions</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Smsified.html" title="Smsified (module)">Smsified</a></span></span>
+     &raquo; 
+    <span class="title">Subscriptions</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Smsified::Subscriptions
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Smsified::Subscriptions</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">HTTParty, <span class='object_link'><a href="Helpers.html" title="Smsified::Helpers (module)">Helpers</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/smsified/subscriptions.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_inbound_subscription-instance_method" title="#create_inbound_subscription (instance method)">- (Object) <strong>create_inbound_subscription</strong>(destination_address, options) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Creates an inbound subscription.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_outbound_subscription-instance_method" title="#create_outbound_subscription (instance method)">- (Object) <strong>create_outbound_subscription</strong>(sender_address, options) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Creates an outbound subscription.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_inbound_subscription-instance_method" title="#delete_inbound_subscription (instance method)">- (Object) <strong>delete_inbound_subscription</strong>(subscription_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Deletes an inbound subscription.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_outbound_subscription-instance_method" title="#delete_outbound_subscription (instance method)">- (Object) <strong>delete_outbound_subscription</strong>(sender_address) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Deletes an outbound subscription.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inbound_subscriptions-instance_method" title="#inbound_subscriptions (instance method)">- (Object) <strong>inbound_subscriptions</strong>(destination_address) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Fetches the inbound subscriptions.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Subscriptions) <strong>initialize</strong>(options) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Intantiate a new class to work with subscriptions.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#outbound_subscriptions-instance_method" title="#outbound_subscriptions (instance method)">- (Object) <strong>outbound_subscriptions</strong>(sender_address) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Fetches the outbound subscriptions.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_inbound_subscription-instance_method" title="#update_inbound_subscription (instance method)">- (Object) <strong>update_inbound_subscription</strong>(subscription_id, options) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Updates an inbound subscription.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_outbound_subscription-instance_method" title="#update_outbound_subscription (instance method)">- (Object) <strong>update_outbound_subscription</strong>(sender_address, options) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Updates an outbound subscription.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Smsified::Subscriptions (class)">Subscriptions</a></span></tt>) <strong>initialize</strong>(options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Intantiate a new class to work with subscriptions
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscription identifier id'>subscription</span> <span class='assign token'>=</span> <span class='Subscription constant id'>Subscription</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'user'</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'123'</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to create the user
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 20</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':username required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:username</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>':password required'</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:password</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='debug_output identifier id'>debug_output</span> <span class='$stdout gvar id'>$stdout</span> <span class='if if_mod kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:debug</span><span class='rbrack token'>]</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='base_uri identifier id'>base_uri</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:base_uri</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='SMSIFIED_ONEAPI_PUBLIC_URI constant id'>SMSIFIED_ONEAPI_PUBLIC_URI</span>
+  <span class='@auth ivar id'>@auth</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:username</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:password</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  
+  <span class='@destination_address ivar id'>@destination_address</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:destination_address</span><span class='rbrack token'>]</span>
+  <span class='@sender_address ivar id'>@sender_address</span>      <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:sender_address</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="create_inbound_subscription-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_inbound_subscription</strong>(destination_address, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates an inbound subscription
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='create_inbound_subscription identifier id'>create_inbound_subscription</span><span class='lparen token'>(</span><span class='string val'>'tel:+14155551212'</span><span class='comma token'>,</span> <span class='symbol val'>:notify_url</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'http://foobar.com'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>destination_address</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to subscribe to
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to send an sms
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>notify_url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to send callbacks to
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 45</span>
+
+<span class='def def kw'>def</span> <span class='create_inbound_subscription identifier id'>create_inbound_subscription</span><span class='lparen token'>(</span><span class='destination_address identifier id'>destination_address</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='query identifier id'>query</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='dot token'>.</span><span class='merge identifier id'>merge</span><span class='lparen token'>(</span><span class='lbrace token'>{</span> <span class='symbol val'>:destination_address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='destination_address identifier id'>destination_address</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='post identifier id'>post</span><span class='lparen token'>(</span><span class='string val'>&quot;/smsmessaging/inbound/subscriptions&quot;</span><span class='comma token'>,</span> 
+                               <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:body</span>       <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='camelcase_keys identifier id'>camelcase_keys</span><span class='lparen token'>(</span><span class='query identifier id'>query</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="create_outbound_subscription-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_outbound_subscription</strong>(sender_address, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates an outbound subscription
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='create_outbound_subscription identifier id'>create_outbound_subscription</span><span class='lparen token'>(</span><span class='string val'>'tel:+14155551212'</span><span class='comma token'>,</span> <span class='symbol val'>:notify_url</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'http://foobar.com'</span><span class='rparen token'>)</span>    
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>sender_address</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to subscribe to
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+a customizable set of options
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 63</span>
+
+<span class='def def kw'>def</span> <span class='create_outbound_subscription identifier id'>create_outbound_subscription</span><span class='lparen token'>(</span><span class='sender_address identifier id'>sender_address</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='post identifier id'>post</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/outbound/#{sender_address}/subscriptions&quot;</span><span class='comma token'>,</span> 
+                               <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:body</span>       <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='camelcase_keys identifier id'>camelcase_keys</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="delete_inbound_subscription-instance_method">
+  
+    - (<tt>Object</tt>) <strong>delete_inbound_subscription</strong>(subscription_id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Deletes an inbound subscription
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='delete_inbound_subscription identifier id'>delete_inbound_subscription</span><span class='lparen token'>(</span><span class='string val'>'89edd71c1c7f3d349f9a3a4d5d2d410c'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>subscription_id</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to delete
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 76</span>
+
+<span class='def def kw'>def</span> <span class='delete_inbound_subscription identifier id'>delete_inbound_subscription</span><span class='lparen token'>(</span><span class='subscription_id identifier id'>subscription_id</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='delete identifier id'>delete</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/inbound/subscriptions/#{subscription_id}&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="delete_outbound_subscription-instance_method">
+  
+    - (<tt>Object</tt>) <strong>delete_outbound_subscription</strong>(sender_address) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Deletes an outbound subscription
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='delete_outbound_subscription identifier id'>delete_outbound_subscription</span><span class='lparen token'>(</span><span class='string val'>'89edd71c1c7f3d349f9a3a4d5d2d410c'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>subscription_id</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to delete
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 87</span>
+
+<span class='def def kw'>def</span> <span class='delete_outbound_subscription identifier id'>delete_outbound_subscription</span><span class='lparen token'>(</span><span class='sender_address identifier id'>sender_address</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='delete identifier id'>delete</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/outbound/subscriptions/#{sender_address}&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="inbound_subscriptions-instance_method">
+  
+    - (<tt>Object</tt>) <strong>inbound_subscriptions</strong>(destination_address) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Fetches the inbound subscriptions
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='inbound_subscriptions identifier id'>inbound_subscriptions</span><span class='lparen token'>(</span><span class='string val'>'tel:+14155551212'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>destination_address</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to fetch the subscriptions for
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 98</span>
+
+<span class='def def kw'>def</span> <span class='inbound_subscriptions identifier id'>inbound_subscriptions</span><span class='lparen token'>(</span><span class='destination_address identifier id'>destination_address</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/inbound/subscriptions?destinationAddress=#{destination_address}&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="outbound_subscriptions-instance_method">
+  
+    - (<tt>Object</tt>) <strong>outbound_subscriptions</strong>(sender_address) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Fetches the outbound subscriptions
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='outbound_subscriptions identifier id'>outbound_subscriptions</span><span class='lparen token'>(</span><span class='string val'>'tel:+14155551212'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>sender_address</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to fetch the subscriptions for
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 109</span>
+
+<span class='def def kw'>def</span> <span class='outbound_subscriptions identifier id'>outbound_subscriptions</span><span class='lparen token'>(</span><span class='sender_address identifier id'>sender_address</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/outbound/subscriptions?senderAddress=#{sender_address}&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update_inbound_subscription-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_inbound_subscription</strong>(subscription_id, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Updates an inbound subscription
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='update_inbound_subscription identifier id'>update_inbound_subscription</span><span class='lparen token'>(</span><span class='string val'>'89edd71c1c7f3d349f9a3a4d5d2d410c'</span><span class='comma token'>,</span> <span class='symbol val'>:notify_url</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'foobar'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to update the inbound subscription with
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 124</span>
+
+<span class='def def kw'>def</span> <span class='update_inbound_subscription identifier id'>update_inbound_subscription</span><span class='lparen token'>(</span><span class='subscription_id identifier id'>subscription_id</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='post identifier id'>post</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/inbound/subscriptions/#{subscription_id}&quot;</span><span class='comma token'>,</span> 
+                               <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:body</span>       <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='camelcase_keys identifier id'>camelcase_keys</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update_outbound_subscription-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_outbound_subscription</strong>(sender_address, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Updates an outbound subscription
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='update_outbound_subscription identifier id'>update_outbound_subscription</span><span class='lparen token'>(</span><span class='string val'>'tel:+14155551212'</span><span class='comma token'>,</span> <span class='symbol val'>:notify_url</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'foobar'</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to update the outbound subscription with
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A Response Object with http and data instance methods
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/smsified/subscriptions.rb', line 141</span>
+
+<span class='def def kw'>def</span> <span class='update_outbound_subscription identifier id'>update_outbound_subscription</span><span class='lparen token'>(</span><span class='sender_address identifier id'>sender_address</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='Response constant id'>Response</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='post identifier id'>post</span><span class='lparen token'>(</span><span class='dstring node'>&quot;/smsmessaging/outbound/#{sender_address}/subscriptions&quot;</span><span class='comma token'>,</span> 
+                               <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@auth ivar id'>@auth</span><span class='comma token'>,</span>
+                               <span class='symbol val'>:body</span>       <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='camelcase_keys identifier id'>camelcase_keys</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri May 20 09:38:06 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.8 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

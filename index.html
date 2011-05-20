@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documentation by YARD 0.6.8</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>smsified</h1>
+
+<p>SMSified is a simple API for sending and receiving text messages using regular phone numbers or short codes. SMSified uses a simple REST interface based on the GSMA OneAPI standard and is backed by Voxeo - the worlds largest communications cloud. Ruby lib for consuming the SMSified OneAPI.</p>
+
+<p>This is a Ruby gem for consuming the SMSified OneAPI.</p>
+
+<h2>Installation</h2>
+
+<pre class="code"><span class='gem identifier id'>gem</span> <span class='install identifier id'>install</span> <span class='smsified identifier id'>smsified</span>
+</pre>
+
+<h2>Example</h2>
+
+<p>Send an SMS:</p>
+
+<pre class="code"><span class='require identifier id'>require</span> <span class='string val'>'rubygems'</span>
+<span class='require identifier id'>require</span> <span class='string val'>'smsified'</span>
+<span class='oneapi identifier id'>oneapi</span> <span class='assign token'>=</span> <span class='Smsified constant id'>Smsified</span><span class='colon2 op'>::</span><span class='OneAPI constant id'>OneAPI</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'user'</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'bug.fungus24'</span><span class='rparen token'>)</span>
+<span class='oneapi identifier id'>oneapi</span><span class='dot token'>.</span><span class='send_sms identifier id'>send_sms</span> <span class='symbol val'>:address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'14155551212'</span><span class='comma token'>,</span> <span class='symbol val'>:message</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'Hi there!'</span><span class='comma token'>,</span> <span class='symbol val'>:sender_address</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'13035551212'</span>
+</pre>
+
+<p>Find a subscription:</p>
+
+<pre class="code"><span class='require identifier id'>require</span> <span class='string val'>'rubygems'</span>
+<span class='require identifier id'>require</span> <span class='string val'>'smsified'</span>
+<span class='subscriptions identifier id'>subscriptions</span> <span class='assign token'>=</span> <span class='Smsified constant id'>Smsified</span><span class='colon2 op'>::</span><span class='Subscriptions constant id'>Subscriptions</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'user'</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'bug.fungus24'</span><span class='rparen token'>)</span>
+<span class='subscriptions identifier id'>subscriptions</span><span class='dot token'>.</span><span class='inbound_subscriptions identifier id'>inbound_subscriptions</span><span class='lparen token'>(</span><span class='string val'>'17177455076'</span><span class='rparen token'>)</span>
+</pre>
+
+<h2>Documentation</h2>
+
+<p>May be found at http://tropo.github.com/smsified &amp; http://smsified.com.</p>
+
+<h2>License</h2>
+
+<p>MIT - See LICENSE.txt</p></div></div>
+    
+    <div id="footer">
+  Generated on Fri May 20 09:38:05 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.8 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
