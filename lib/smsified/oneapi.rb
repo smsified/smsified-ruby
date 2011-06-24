@@ -95,7 +95,7 @@ module Smsified
       
       options.each do |k,v|
         if k == :address
-          v.each { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+          v.each_line { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
         else
           query += "#{ '&' if query != '' }#{k.to_s}=#{CGI.escape v}"
         end
