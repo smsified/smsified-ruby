@@ -16,6 +16,7 @@ module Smsified
     # @example
     #   subscription = Subscription.new :username => 'user', :password => '123'
     def initialize(options)
+      raise ArgumentError, 'an options Hash is required' if !options.instance_of?(Hash)
       raise ArgumentError, ':username required' if options[:username].nil?
       raise ArgumentError, ':password required' if options[:password].nil?
       
@@ -38,6 +39,7 @@ module Smsified
     # @example
     #   one_api.delivery_status :request_id => 'f359193765f6a3149ca76a4508e21234', :sender_address => '14155551212'
     def delivery_status(options)
+      raise ArgumentError, 'an options Hash is required' if !options.instance_of?(Hash)
       raise ArgumentError, ':sender_address is required' if options[:sender_address].nil? && @sender_address.nil?
       
       options[:sender_address] = options[:sender_address] || @sender_address

@@ -18,6 +18,7 @@ module Smsified
     # @example
     #   subscription = Subscription.new :username => 'user', :password => '123'
     def initialize(options)
+      raise ArgumentError, 'an options Hash is required' if !options.instance_of?(Hash)
       raise ArgumentError, ':username required' if options[:username].nil?
       raise ArgumentError, ':password required' if options[:password].nil?
       

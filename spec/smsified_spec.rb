@@ -27,9 +27,15 @@ describe "Smsified" do
       begin
         Smsified::OneAPI.new 'foobar'
       rescue => e
+        e.to_s.should eql 'an options Hash is required'
+      end
+
+      begin
+        Smsified::OneAPI.new(:password => nil)
+      rescue => e
         e.to_s.should eql ':username required'
       end
-   
+      
       begin
         Smsified::OneAPI.new(:username => @username)
       rescue => e
@@ -40,6 +46,12 @@ describe "Smsified" do
     it "Should raise an error if no :sender_address specified" do
       begin
         @one_api.send_sms('foobar')
+      rescue => e
+        e.to_s.should eql 'an options Hash is required'
+      end
+      
+      begin
+        @one_api.send_sms({})
       rescue => e
         e.to_s.should eql ':sender_address is required'
       end
@@ -104,6 +116,12 @@ describe "Smsified" do
     it "Should get errors if instantiating without all of the right parameters" do
       begin
         Smsified::Subscriptions.new 'foobar'
+      rescue => e
+        e.to_s.should eql 'an options Hash is required'
+      end
+      
+      begin
+        Smsified::Subscriptions.new({})
       rescue => e
         e.to_s.should eql ':username required'
       end
@@ -365,6 +383,12 @@ describe "Smsified" do
       begin
         Smsified::Reporting.new 'foobar'
       rescue => e
+        e.to_s.should eql 'an options Hash is required'
+      end
+      
+      begin
+        Smsified::Reporting.new({})
+      rescue => e
         e.to_s.should eql ':username required'
       end
       
@@ -378,6 +402,12 @@ describe "Smsified" do
     it "Should raise an error if no :sender_address specified" do
       begin
         @reporting.delivery_status('foobar')
+      rescue => e
+        e.to_s.should eql 'an options Hash is required'
+      end
+      
+      begin
+        @reporting.delivery_status({})
       rescue => e
         e.to_s.should eql ':sender_address is required'
       end

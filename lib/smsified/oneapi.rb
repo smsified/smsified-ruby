@@ -23,6 +23,7 @@ module Smsified
     # @example 
     #   one_api = OneAPI.new :username => 'user', :password => '123'
     def initialize(options)
+      raise ArgumentError, 'an options Hash is required' if !options.instance_of?(Hash)
       raise ArgumentError, ':username required' if options[:username].nil?
       raise ArgumentError, ':password required' if options[:password].nil?
       
@@ -53,6 +54,7 @@ module Smsified
     #   one_api.send_sms :address => '14155551212', :message => 'Hi there!', :sender_address => '13035551212'
     #   one_api.send_sms :address => ['14155551212', '13035551212'], :message => 'Hi there!', :sender_address => '13035551212'
     def send_sms(options)
+      raise ArgumentError, 'an options Hash is required' if !options.instance_of?(Hash)
       raise ArgumentError, ':sender_address is required' if options[:sender_address].nil? && @sender_address.nil?
       raise ArgumentError, ':address is required' if options[:address].nil?
       raise ArgumentError, ':message is required' if options[:message].nil?
@@ -92,10 +94,18 @@ module Smsified
     # Builds the necessary query string
     def build_query_string(options)
       query = ''
-      
+
       options.each do |k,v|
         if k == :address
-          v.each_line { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+          if RUBY_VERSION.to_f == 1.9
+            if v.instance_of?(String)
+              v.each_line { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+            else
+              v.each { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+            end
+          else
+            v.each { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+          end
         else
           query += "#{ '&' if query != '' }#{k.to_s}=#{CGI.escape v}"
         end
