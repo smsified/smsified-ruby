@@ -254,6 +254,7 @@ describe "Smsified" do
     
     describe 'Updated subscriptions' do
       before(:all) do
+        @inbound_subscription  = { "resourceReference" => { "resourceURL" => "https://api.smsified.com/v1/smsmessaging/inbound/subscriptions/e636368b7fddac0e93e34ae03bad33dd" } }
         @outbound_subscription = { "resourceReference" => { "resourceURL" => "https://api.smsified.com/v1/smsmessaging/outbound/subscriptions/4bc465cd394c9f5e78802af5ad6bb442" } }
         
         FakeWeb.register_uri(:post, 
@@ -263,11 +264,10 @@ describe "Smsified" do
       end
       
       it 'Should update an inbound subscription' do
-        pending('udpate resources being deployed')
         result = @subscriptions.update_inbound_subscription('c880c96f161f6220d4977b29b4bfc111', :notify_url => 'http://foobar1.com')
 
         result.http.code.should eql '200'
-        result.data.should eql nil
+        result.data.should eql @inbound_subscription
       end
       
       it 'Should update an outbound subscription' do
