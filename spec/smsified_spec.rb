@@ -443,4 +443,35 @@ describe "Smsified" do
       sms_message.data.should eql @message
     end
   end
+  
+  describe 'IncomingMessage' do
+    it 'Should parse an incoming message from SMSified' do
+      json = '{
+                "inboundSMSMessageNotification": {
+                  "inboundSMSMessage": {
+                    "dateTime": "2011-05-11T18:05:54.546Z", 
+                    "destinationAddress": "16575550100", 
+                    "message": "Inbound test", 
+                    "messageId": "ef795d3dac56a62fef3ff1852b0c123a", 
+                    "senderAddress": "14075550100"
+                  }
+                }
+              }'
+      
+      incoming_message = Smsified::IncomingMessage.new json
+      incoming_message.date_time.should eql '2011-05-11T18:05:54.546Z'
+      incoming_message.destination_address.should eql '16575550100'
+      incoming_message.message.should eql 'Inbound test'
+      incoming_message.message_id.should eql 'ef795d3dac56a62fef3ff1852b0c123a'
+      incoming_message.sender_address.should eql '14075550100'
+    end
+    
+    it "Should raise an error if JSON not passed" do
+      lambda { Smsified::IncomingMessage.new 'foobar' }.should raise_error(Smsified::IncomingMessage::MessageError)
+    end
+    
+    it "Should raise an error if a different type than an IncomingMessage is passed" do
+      lambda { Smsified::IncomingMessage.new "{ 'foo': 'bar'}" }.should raise_error(Smsified::IncomingMessage::MessageError)
+    end
+  end
 end
