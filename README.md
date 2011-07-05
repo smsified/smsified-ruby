@@ -28,6 +28,18 @@ Find a subscription:
 	subscriptions = Smsified::Subscriptions.new(:username => 'user', :password => 'bug.fungus24')
 	subscriptions.inbound_subscriptions('17177455076')
 
+Parse the JSON for a callback Incoming Message:
+
+    require 'rubygems'
+    require 'smsified'
+    # Also require your favorite web framework such as Rails or Sinatra
+    incoming_message = Smsified::IncomingMessage.new json_body
+	puts incoming_message.date_time           # '2011-05-11T18:05:54.546Z'
+    puts incoming_message.destination_address # '16575550100'
+    puts incoming_message.message             #'Inbound test'
+    puts incoming_message.message_id          # 'ef795d3dac56a62fef3ff1852b0c123a'
+    puts incoming_message.sender_address      # '14075550100'
+
 Documentation
 -------------
 
