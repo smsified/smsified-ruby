@@ -18,7 +18,7 @@ module Smsified
         
         contents             = @json['inboundSMSMessageNotification']['inboundSMSMessage']
         
-        @date_time           = contents['dateTime']
+        @date_time           = Time.parse contents['dateTime']
         @destination_address = contents['destinationAddress']
         @message             = contents['message']
         @message_id          = contents['messageId']

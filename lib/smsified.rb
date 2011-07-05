@@ -1,7 +1,8 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 %w(
  cgi 
- httparty 
+ httparty
+ time
  smsified/helpers 
  smsified/oneapi 
  smsified/subscriptions 

@@ -459,7 +459,7 @@ describe "Smsified" do
               }'
       
       incoming_message = Smsified::IncomingMessage.new json
-      incoming_message.date_time.should eql '2011-05-11T18:05:54.546Z'
+      incoming_message.date_time.should eql Time.parse '2011-05-11T18:05:54.546Z'
       incoming_message.destination_address.should eql '16575550100'
       incoming_message.message.should eql 'Inbound test'
       incoming_message.message_id.should eql 'ef795d3dac56a62fef3ff1852b0c123a'
