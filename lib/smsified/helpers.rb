@@ -23,7 +23,7 @@ module Smsified
       end
       
       if options[:callback_data]
-        params[:callbackData] = options[:callback_data]
+        options[:callbackData] = options[:callback_data]
         options.delete(:callback_data)
       end
       
