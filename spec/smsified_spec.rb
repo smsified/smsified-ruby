@@ -118,6 +118,7 @@ describe "Smsified" do
     it "Should send an SMS" do
       response = @one_api.send_sms(:address => @address, :message => 'Hola from RSpec!', :sender_address => @sender_address)
       response.data.should eql @message_sent
+      FakeWeb.last_request.body.should eql "message=Hola+from+RSpec%21&address=14155551212"
     end
     
     it "Should send an SMS to multiple destinations" do
@@ -125,6 +126,7 @@ describe "Smsified" do
                                    :message        => 'Hola from RSpec!', 
                                    :sender_address => @sender_address)
       response.data.should eql @message_sent
+      FakeWeb.last_request.body.should eql "message=Hola+from+RSpec%21&address=14155551212&address=13035551212"
     end
     
     it "Should raise an error if you pass an unknown method name" do
@@ -276,12 +278,14 @@ describe "Smsified" do
         result = @subscriptions.create_inbound_subscription('17177455076', :notify_url => 'http://foobar.com')
         result.http.code.should eql '200'
         result.data.should eql @inbound_subscription
+        FakeWeb.last_request.body.should eql "destinationAddress=17177455076&notifyURL=http%3A%2F%2Ffoobar.com"
       end
     
       it 'Should create an outbound subscription' do
         result = @subscriptions.create_outbound_subscription('17177455076', :notify_url => 'http://foobar.com')
         result.http.code.should eql '200'
         result.data.should eql @outbound_subscription
+        FakeWeb.last_request.body.should eql "notifyURL=http%3A%2F%2Ffoobar.com"
       end
     end
     
@@ -301,12 +305,14 @@ describe "Smsified" do
 
         result.http.code.should eql '200'
         result.data.should eql @inbound_subscription
+        FakeWeb.last_request.body.should eql "notifyURL=http%3A%2F%2Ffoobar1.com"
       end
       
       it 'Should update an outbound subscription' do
         result = @subscriptions.update_outbound_subscription(@sender_address, :notify_url => 'http://foobar.com')
         result.http.code.should eql '200'
         result.data.should eql @outbound_subscription
+        FakeWeb.last_request.body.should eql "notifyURL=http%3A%2F%2Ffoobar.com"
       end
     end
     
