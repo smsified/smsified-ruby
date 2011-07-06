@@ -64,7 +64,7 @@ module Smsified
     def create_outbound_subscription(sender_address, options)
       Response.new self.class.post("/smsmessaging/outbound/#{sender_address}/subscriptions", 
                                    :basic_auth => @auth,
-                                   :body       => camelcase_keys(options))
+                                   :body       => build_query_string(options))
     end
     
     ##
@@ -125,7 +125,7 @@ module Smsified
     def update_inbound_subscription(subscription_id, options)
       Response.new self.class.post("/smsmessaging/inbound/subscriptions/#{subscription_id}", 
                                    :basic_auth => @auth,
-                                   :body       => camelcase_keys(options))
+                                   :body       => build_query_string(options))
     end
     
     ##
@@ -142,7 +142,7 @@ module Smsified
     def update_outbound_subscription(sender_address, options)
       Response.new self.class.post("/smsmessaging/outbound/#{sender_address}/subscriptions", 
                                    :basic_auth => @auth,
-                                   :body       => camelcase_keys(options))
+                                   :body       => build_query_string(options))
     end
   end
 end

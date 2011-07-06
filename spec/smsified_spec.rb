@@ -12,26 +12,35 @@ describe "Smsified" do
   end
   
   describe "Helpers" do
-    it 'Should camelcase the appropriate keys' do
+    before(:all) do
       class Foo
         include Smsified::Helpers
         
-        attr_reader :keys 
+        attr_reader :keys, :query_string 
         
         def initialize(hash)
           @keys = camelcase_keys(hash)
+          @query_string = build_query_string(hash)
         end
       end
       
-      camelcased_keys = Foo.new({ :destination_address => 'foo',
-                                  :notify_url          => 'bar',
-                                  :client_correlator   => 'baz',
-                                  :callback_data       => 'donkey' }).keys
+      @foo = Foo.new({ :destination_address => 'foo',
+                       :notify_url          => 'bar',
+                       :client_correlator   => 'baz',
+                       :callback_data       => 'donkey' })
+    end
+    
+    it 'Should camelcase the appropriate keys' do                                  
+      camelcased_keys = @foo.keys
                                   
       camelcased_keys[:destinationAddress].should eql 'foo'
       camelcased_keys[:notifyURL].should eql 'bar'
       camelcased_keys[:clientCorrelator].should eql 'baz'
       camelcased_keys[:callbackData].should eql 'donkey'
+    end
+    
+    it 'Should build a proper query string' do
+      @foo.query_string.should eql "destinationAddress=foo&notifyURL=bar&clientCorrelator=baz&callbackData=donkey"
     end
   end
   

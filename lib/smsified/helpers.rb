@@ -29,5 +29,31 @@ module Smsified
       
       options
     end
+    
+    ##
+    # Builds the necessary query string
+    def build_query_string(options)
+      options = camelcase_keys(options)
+      
+      query = ''
+
+      options.each do |k,v|
+        if k == :address
+          if RUBY_VERSION.to_f == 1.9
+            if v.instance_of?(String)
+              v.each_line { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+            else
+              v.each { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+            end
+          else
+            v.each { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
+          end
+        else
+          query += "#{ '&' if query != '' }#{k.to_s}=#{CGI.escape v}"
+        end
+      end
+
+      query
+    end
   end
 end
