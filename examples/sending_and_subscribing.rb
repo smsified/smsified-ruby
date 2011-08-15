@@ -30,7 +30,7 @@ puts result.data.inspect
 puts result.http.inspect
 
 # Get some of your sent SMS details
-result = smsified.search_sms 'startDate=2011-02-14&endDate=2011-02-15'
+result = smsified.search_sms 'start=2011-02-14&end=2011-02-15'
 puts result.data.inspect
 puts result.data.inspect
 

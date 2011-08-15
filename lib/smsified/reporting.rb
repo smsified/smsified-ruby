@@ -64,7 +64,7 @@ module Smsified
     # @param [required, String] query_string to search SMS messages for
     # @return [Object] A Response Object with http and data instance methods
     # @example
-    #   reporting.search_sms 'startDate=2011-02-14&endDate=2011-02-15'
+    #   reporting.search_sms 'start=2011-02-14&end=2011-02-15'
     def search_sms(query_string)
       Response.new self.class.get("/messages?#{query_string}", :basic_auth => @auth)
     end

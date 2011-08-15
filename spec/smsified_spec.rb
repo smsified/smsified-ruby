@@ -118,7 +118,7 @@ describe "Smsified" do
     it "Should send an SMS" do
       response = @one_api.send_sms(:address => @address, :message => 'Hola from RSpec!', :sender_address => @sender_address)
       response.data.should eql @message_sent
-      FakeWeb.last_request.body.should eql "message=Hola+from+RSpec%21&address=14155551212"
+      FakeWeb.last_request.body.should eql "address=14155551212&message=Hola+from+RSpec%21"
     end
     
     it "Should send an SMS to multiple destinations" do
@@ -126,7 +126,7 @@ describe "Smsified" do
                                    :message        => 'Hola from RSpec!', 
                                    :sender_address => @sender_address)
       response.data.should eql @message_sent
-      FakeWeb.last_request.body.should eql "message=Hola+from+RSpec%21&address=14155551212&address=13035551212"
+      FakeWeb.last_request.body.should eql "address=14155551212&address=13035551212&message=Hola+from+RSpec%21"
     end
     
     it "Should raise an error if you pass an unknown method name" do
@@ -403,7 +403,7 @@ describe "Smsified" do
                            :body   => @message.to_json)
       
       FakeWeb.register_uri(:get, 
-                           "https://#{@username}:#{@password}@api.smsified.com/v1/messages?startDate=2011-05-12&endDate=2011-05-12",
+                           "https://#{@username}:#{@password}@api.smsified.com/v1/messages?start=2011-05-12&end=2011-05-12",
                            :status => ["200", "OK"],
                            :body   => @message_range.to_json)
       
@@ -464,7 +464,7 @@ describe "Smsified" do
     end
     
     it "Should retrieve SMS messages based on a query string" do
-      response = @reporting.search_sms 'startDate=2011-05-12&endDate=2011-05-12'
+      response = @reporting.search_sms 'start=2011-05-12&end=2011-05-12'
       response.data.should eql @message_range
     end
     
