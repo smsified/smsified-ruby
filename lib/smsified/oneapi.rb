@@ -1,6 +1,6 @@
 module Smsified
   SMSIFIED_ONEAPI_PUBLIC_URI = 'https://api.smsified.com/v1'
-  SMSIFIED_HTTP_HEADERS      = { 'Content-Type' => 'application/x-www-form-urlencoded' }
+  SMSIFIED_HTTP_HEADERS      = { 'Content-Type' => 'application/x-www-form-urlencoded','Accept'=>'application/json' }
   
   class OneAPI
     include Helpers

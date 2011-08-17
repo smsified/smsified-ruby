@@ -48,7 +48,10 @@ module Smsified
       
       Response.new self.class.post("/smsmessaging/inbound/subscriptions", 
                                    :basic_auth => @auth,
-                                   :body       => camelcase_keys(query))
+                                   :body       => camelcase_keys(query),
+                                   :headers    => SMSIFIED_HTTP_HEADERS
+                                   )
+
     end
     
     ##
@@ -64,7 +67,9 @@ module Smsified
     def create_outbound_subscription(sender_address, options)
       Response.new self.class.post("/smsmessaging/outbound/#{sender_address}/subscriptions", 
                                    :basic_auth => @auth,
-                                   :body       => build_query_string(options))
+                                   :body       => build_query_string(options),
+                                   :headers    => SMSIFIED_HTTP_HEADERS
+                                   )
     end
     
     ##
@@ -75,7 +80,7 @@ module Smsified
     # @example
     #   subscriptions.delete_inbound_subscription('89edd71c1c7f3d349f9a3a4d5d2d410c')
     def delete_inbound_subscription(subscription_id)
-      Response.new self.class.delete("/smsmessaging/inbound/subscriptions/#{subscription_id}", :basic_auth => @auth)
+      Response.new self.class.delete("/smsmessaging/inbound/subscriptions/#{subscription_id}", :basic_auth => @auth, :headers    => SMSIFIED_HTTP_HEADERS)
     end
     
     ##
@@ -86,7 +91,7 @@ module Smsified
     # @example
     #   subscriptions.delete_outbound_subscription('89edd71c1c7f3d349f9a3a4d5d2d410c')
     def delete_outbound_subscription(sender_address)
-      Response.new self.class.delete("/smsmessaging/outbound/subscriptions/#{sender_address}", :basic_auth => @auth)
+      Response.new self.class.delete("/smsmessaging/outbound/subscriptions/#{sender_address}", :basic_auth => @auth, :headers    => SMSIFIED_HTTP_HEADERS)
     end
     
     ##
@@ -97,7 +102,7 @@ module Smsified
     # @example
     #   subscriptions.inbound_subscriptions('tel:+14155551212')
     def inbound_subscriptions(destination_address)
-      Response.new self.class.get("/smsmessaging/inbound/subscriptions?destinationAddress=#{destination_address}", :basic_auth => @auth)
+      Response.new self.class.get("/smsmessaging/inbound/subscriptions?destinationAddress=#{destination_address}", :basic_auth => @auth, :headers    => SMSIFIED_HTTP_HEADERS)
     end
 
     ##
@@ -108,7 +113,7 @@ module Smsified
     # @example
     #   subscriptions.outbound_subscriptions('tel:+14155551212')
     def outbound_subscriptions(sender_address)
-      Response.new self.class.get("/smsmessaging/outbound/subscriptions?senderAddress=#{sender_address}", :basic_auth => @auth)
+      Response.new self.class.get("/smsmessaging/outbound/subscriptions?senderAddress=#{sender_address}", :basic_auth => @auth, :headers    => SMSIFIED_HTTP_HEADERS)
     end
     
     ##
@@ -125,7 +130,9 @@ module Smsified
     def update_inbound_subscription(subscription_id, options)
       Response.new self.class.post("/smsmessaging/inbound/subscriptions/#{subscription_id}", 
                                    :basic_auth => @auth,
-                                   :body       => build_query_string(options))
+                                   :body       => build_query_string(options),
+                                   :headers    => SMSIFIED_HTTP_HEADERS
+                                   )
     end
     
     ##
@@ -142,7 +149,9 @@ module Smsified
     def update_outbound_subscription(sender_address, options)
       Response.new self.class.post("/smsmessaging/outbound/#{sender_address}/subscriptions", 
                                    :basic_auth => @auth,
-                                   :body       => build_query_string(options))
+                                   :body       => build_query_string(options),
+                                   :headers    => SMSIFIED_HTTP_HEADERS
+                                   )
     end
   end
 end

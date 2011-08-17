@@ -438,6 +438,11 @@ describe "Smsified" do
       end
     end
     
+    it "should send json content type header" do
+      response = @reporting.search_sms 'start=2011-05-12&end=2011-05-12'
+      puts response.methods##.should eql @message_range
+    end
+    
     it "Should raise an error if no :sender_address specified" do
       begin
         @reporting.delivery_status('foobar')
