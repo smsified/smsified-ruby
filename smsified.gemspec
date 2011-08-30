@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smsified}
-  s.version = "0.1.6"
+  s.version = "0.1.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jason Goecke"]
-  s.date = %q{2011-07-05}
+  s.authors = [%q{Jason Goecke}, %q{John Dyer}]
+  s.date = %q{2011-08-30}
   s.description = %q{Gem for consuming the SMSified OneAPI}
-  s.email = %q{jsgoecke@voxeo.com}
+  s.email = [%q{jsgoecke@voxeo.com}, %q{jdyer@voxeo.com}]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -27,9 +27,9 @@ Gem::Specification.new do |s|
     "lib/smsified/subscriptions.rb"
   ]
   s.homepage = %q{http://github.com/tropo/smsified-oneapi}
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.0}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.6}
   s.summary = %q{Gem for consuming the SMSified OneAPI}
   s.test_files = [
     "examples/sending_and_subscribing.rb",
