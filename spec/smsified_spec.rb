@@ -405,6 +405,7 @@ describe "Smsified" do
       FakeWeb.register_uri(:get, 
                            "https://#{@username}:#{@password}@api.smsified.com/v1/messages?start=2011-05-12&end=2011-05-12",
                            :status => ["200", "OK"],
+                           :content_type=>"application/json",
                            :body   => @message_range.to_json)
       
       FakeWeb.register_uri(:get, 
@@ -438,9 +439,9 @@ describe "Smsified" do
       end
     end
     
-    it "should send json content type header" do
+    it "should get json by default" do
       response = @reporting.search_sms 'start=2011-05-12&end=2011-05-12'
-      puts response.methods##.should eql @message_range
+      response.http.content_type.should eql "application/json"
     end
     
     it "Should raise an error if no :sender_address specified" do
