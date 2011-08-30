@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.license = "MIT"
   gem.summary = "Gem for consuming the SMSified OneAPI"
   gem.description = "Gem for consuming the SMSified OneAPI"
-  gem.email = ["jsgoecke@voxeo.com","jdyer@voxeo.com"]
+  gem.email = ["jsgoecke@voxeo.com","johntdyer@gmail.com"]
   gem.authors = ["Jason Goecke","John Dyer"]
   gem.add_runtime_dependency 'httparty'
   gem.files = Dir.glob("{lib}/**/*") + %w(README.md)
