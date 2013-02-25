@@ -39,7 +39,7 @@ module Smsified
 
       options.each do |k,v|
         if k == :address
-          if RUBY_VERSION.to_f == 1.9
+          if RUBY_VERSION.to_f >= 1.9
             if v.instance_of?(String)
               v.each_line { |address| query += "#{ '&' if query != '' }address=#{CGI.escape address}" }
             else
