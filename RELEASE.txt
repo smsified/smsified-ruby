@@ -1,2 +1,5 @@
+- v0.1.8
+  - Update maintainters
+  - ruby 2.0 support
 - v0.1.5
   - Initial release

@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smsified}
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Jason Goecke}, %q{John Dyer}]
   s.date = %q{2011-08-30}
   s.description = %q{Gem for consuming the SMSified OneAPI}
-  s.email = [%q{jsgoecke@voxeo.com}, %q{jdyer@voxeo.com}]
+  s.email = [%q{jsgoecke@tropo.com}, %q{jdyer@tropo.com}]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
